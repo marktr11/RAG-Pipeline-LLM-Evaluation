@@ -1,0 +1,16 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Jupyter notebook checkpoints
+*.ipynb_checkpoints/
+
+# Environment variables
+.env
+*.env
+
+# Jupyter runtime files
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
