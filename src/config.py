@@ -74,6 +74,15 @@ if not os.path.exists(PDF_FILE_PATH):
 else:
     logging.info(f"PDF file path configured: {PDF_FILE_PATH}")
 
-# Note: LangChain often automatically picks up LANGSMITH_* environment variables
-# if they are set before LangChain modules are imported.
-# Calling load_dotenv() early like this helps ensure they are available.
+
+
+# Text splitting parameters
+CHUNK_SIZE = 1500
+CHUNK_OVERLAP = 250
+
+# LLM Models (Giả sử bạn sẽ khởi tạo LLM và embeddings ở đâu đó, ví dụ trong main.py)
+EMBEDDING_MODEL_NAME = "text-embedding-3-large"
+LLM_MODEL_NAME = "gpt-4o-mini" 
+
+# Prompt Hub ID
+RAG_PROMPT_HUB_ID = "rlm/rag-prompt"
