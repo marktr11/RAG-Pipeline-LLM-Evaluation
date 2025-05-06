@@ -5,7 +5,7 @@ from langchain import hub
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 
 #modules
-from processing import load_and_chunk_blog_content, add_section_metadata
+from processing import load_and_chunk_content, add_section_metadata
 from vector_store import create_and_populate_vector_store
 from step import analyze_query_step, retrieve_step, generate_step
 from config import RAG_PROMPT_HUB_ID
@@ -24,13 +24,13 @@ def run_rag_pipeline(question: str):
     
     try:
         embeddings_model = OpenAIEmbeddings(model=config.EMBEDDING_MODEL_NAME)
-        llm = ChatOpenAI(model=config.LLM_MODEL_NAME, temperature=0)
+        llm = ChatOpenAI(model=config.LLM_MODEL_NAME, temperature=0) #temperature=0 for reproducible results
     except Exception as e:
         print(f"Error initializing OpenAI models: {e}")
         return
 
     # --- Splitting document ---
-    doc_splits = load_and_chunk_blog_content()
+    doc_splits = load_and_chunk_content()
     doc_splits_with_metadata = add_section_metadata(doc_splits)
 
     # --- vetor store

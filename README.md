@@ -9,10 +9,11 @@ This repository implements a simple RAG pipeline that reads from PDF files and a
     -   `.env.example`: Example environment file for API keys.
     -   `output_example.txt` : Expected output
     -   `config.py` : Stores configuration variables such as API keys, chunk size, and model settings.
--   `PART2_EVALUATION_METHODOLOGY/`: A document outlining the proposed system for evaluating RAG response quality.
--   `data` : contain the data.
-    -   `publication.pdf`: The source document used for the RAG system.
--   `exploration` : contain the jupyter notebook file.
+    -   `data/` : contain the data.
+        -   `publication.pdf`: The source document used for the RAG system.
+-   `PART2_EVALUATION_METHODOLOGY/`: contain a document outlining the proposed system for evaluating RAG response quality.
+    -   `Evaluation_methodology.pdf`
+-   `exploration/` : contain the jupyter notebook file.
     - `rag_explore.ipynb` : learn and explore how to build RAG.
 -   `README.md`: This file.
 -   `requirements.txt`: Python dependencies.
@@ -43,9 +44,9 @@ This repository implements a simple RAG pipeline that reads from PDF files and a
     -   Rename `.env.example` to `.env` within the `PART1_RAG_IMPLEMENTATION` directory.
     -   Open the `.env` file and replace `"your_openai_api_key_here"` with your actual OpenAI API key:
         ```
-        LLM_API_KEY_ENV="xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        OpenAI_API_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
         ```
-    Alternatively, you can set the `LLM_API_KEY_ENV` as an environment variable in your system.
+    Alternatively, you can set the `OpenAI_API_key` as an environment variable in your system.
 
 ## Running Part 1: RAG Pipeline
 

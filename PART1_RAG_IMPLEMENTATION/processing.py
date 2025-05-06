@@ -6,9 +6,9 @@ from config import PDF_FILE_PATH, CHUNK_SIZE, CHUNK_OVERLAP
 
 
 
-def load_and_chunk_blog_content() -> List[Document]:
+def load_and_chunk_content() -> List[Document]:
     """
-    Loads content from the specified blog URL, extracts relevant sections,
+    Loads content from the specified pdf file, extracts relevant sections,
     and splits it into smaller document chunks.
 
     Returns:

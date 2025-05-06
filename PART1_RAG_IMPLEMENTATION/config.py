@@ -42,7 +42,7 @@ LANGSMITH_PROJECT_NAME = os.getenv("LANGSMITH_PROJECT") # Can be None if not set
 
 # == Data Configuration ==
 # Define the path to the input PDF document.
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 PDF_FILENAME = "publication.pdf"
 PDF_FILE_PATH = os.path.join(PROJECT_ROOT, "data", PDF_FILENAME)
 

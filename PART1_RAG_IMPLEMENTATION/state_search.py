@@ -11,7 +11,7 @@ class Search(TypedDict):
     section: Annotated[
         Literal["beginning", "middle", "end"],
         "The specific section of the document to target for the search.",
-    ]
+    ]# need to modify
 
 class State(TypedDict):
     """
