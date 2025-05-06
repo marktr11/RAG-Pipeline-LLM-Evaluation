@@ -26,7 +26,7 @@ logging.info(f"Current working directory: {current_working_directory}")
 
 # == LLM Configuration ==
 # Load the LLM API key from the environment variable.
-LLM_API_KEY = os.getenv("YOUR_LLM_API_KEY_ENV_VAR_NAME") # Replace with your actual env var name (e.g., OPENAI_API_KEY)
+LLM_API_KEY = os.getenv("LLM_API_KEY_ENV")
 
 # == LangSmith Configuration ==
 LANGSMITH_API_KEY = os.getenv("LANGSMITH_API_KEY")
@@ -43,7 +43,7 @@ LANGSMITH_PROJECT_NAME = os.getenv("LANGSMITH_PROJECT") # Can be None if not set
 # == Data Configuration ==
 # Define the path to the input PDF document.
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PDF_FILENAME = "2411.15594v5.pdf" # Change if your PDF has a different name
+PDF_FILENAME = "publication.pdf"
 PDF_FILE_PATH = os.path.join(PROJECT_ROOT, "data", PDF_FILENAME)
 
 
@@ -56,6 +56,8 @@ else:
     # Never log the actual key! Just confirm it's loaded.
     logging.info("LLM API Key loaded from environment.")
 
+
+# LangSmith is optional
 if LANGSMITH_TRACING_ENABLED:
     if not LANGSMITH_API_KEY:
         logging.warning("LangSmith tracing is enabled (LANGSMITH_TRACING_V2=true), but LANGSMITH_API_KEY was not found in .env.")
@@ -80,7 +82,7 @@ else:
 CHUNK_SIZE = 1500
 CHUNK_OVERLAP = 250
 
-# LLM Models (Giả sử bạn sẽ khởi tạo LLM và embeddings ở đâu đó, ví dụ trong main.py)
+# Model names
 EMBEDDING_MODEL_NAME = "text-embedding-3-large"
 LLM_MODEL_NAME = "gpt-4o-mini" 
 

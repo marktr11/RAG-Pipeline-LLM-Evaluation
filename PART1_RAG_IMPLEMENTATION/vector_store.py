@@ -3,6 +3,7 @@ from langchain_core.vectorstores import InMemoryVectorStore
 from langchain_core.embeddings import Embeddings 
 from typing import List
 
+#This file contains the functions to create and populate the vector store
 
 def create_and_populate_vector_store(
     documents: List[Document], embeddings: Embeddings

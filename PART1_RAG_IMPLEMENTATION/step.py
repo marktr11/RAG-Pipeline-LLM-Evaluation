@@ -5,13 +5,15 @@ from langchain_core.prompts import BasePromptTemplate
 from langchain_core.documents import Document 
 from typing import List
 
-from state_schema import Search 
+from state_search import Search 
+
+# This file contains the step functions for the RAG pipeline.
 
 def analyze_query_step(question: str, llm: BaseLanguageModel) -> Search:
     """
     Analyzes the user's question using an LLM to produce a structured Search object.
     """
-    print(f"--- Step: analyze_query for question: '{question}' ---")
+    print(f"--- Step: Query Analysis for question: '{question}' ---")
     structured_llm = llm.with_structured_output(Search)
     query_structured = structured_llm.invoke(question)
     print(f"Structured query: {query_structured}")
@@ -51,4 +53,7 @@ def generate_step(
     response = llm.invoke(messages)
     generated_answer = response.content
     print(f"Generated answer: {generated_answer}")
+    
+    # Need to export the generated answer in other file. 7/5/25 task
+
     return generated_answer 
