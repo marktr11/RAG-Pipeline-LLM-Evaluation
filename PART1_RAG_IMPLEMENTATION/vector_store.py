@@ -10,6 +10,8 @@ def create_and_populate_vector_store(
     """
     Creates an in-memory vector store and populates it with the provided documents.
 
+    1. Storing documents (Indexing)
+
     Args:
         documents (List[Document]): The document chunks to add to the vector store.
         embeddings (Embeddings): The embedding model to use for vectorizing documents.
