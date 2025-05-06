@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import logging
 
 # basic logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(levelname)s - %(message)s')
 
 
 # Absolute path to the directory containing the current script file (config.py)
@@ -36,7 +36,6 @@ LANGSMITH_API_KEY = os.getenv("LANGSMITH_API_KEY")
 LANGSMITH_TRACING_ENABLED = os.getenv("LANGSMITH_TRACING_V2", "false").lower() == "true" # Default to false if not set
 
 # Optional: Specify a LangSmith project name
-# Example .env entry: LANGSMITH_PROJECT=My_RAG_Project
 LANGSMITH_PROJECT_NAME = os.getenv("LANGSMITH_PROJECT") # Can be None if not set
 
 
