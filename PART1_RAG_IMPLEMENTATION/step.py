@@ -97,6 +97,19 @@ def generate_step(
     generated_answer = response.content
     print(f"\nGenerated answer: {generated_answer}")
     
-    # Need to export the generated answer in other file. 
+
+    # Limit the total context length to avoid exceeding model's token limit or causing unnecessary verbosity.
+    # This helps maintain LLM performance and prevents errors from overly long input sequences.
+    MAX_CONTEXT_LENGTH = 2000  # chars
+    docs_content = docs_content[:MAX_CONTEXT_LENGTH]
+
+    # Save result to file
+    output_path = "PART1_RAG_IMPLEMENTATION\output_example.txt"
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(f"Question:\n{question}\n\n")
+        f.write(f"Context:\n {docs_content}\n\n")
+        f.write("Generated Answer:\n")
+        f.write(generated_answer)
+    logger.info(f"\nOutput saved to {output_path}")
 
     return generated_answer 

@@ -5,7 +5,7 @@ from langchain import hub
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 
 # Custom modules for RAG pipeline components
-from processing import load_and_chunk_content, add_section_metadata
+from processing import load_and_split_content, add_section_metadata
 from vector_store import create_and_populate_vector_store
 from step import analyze_query_step, retrieve_step, generate_step
 from config import RAG_PROMPT_HUB_ID
@@ -48,7 +48,7 @@ def run_rag_pipeline(question: str):
         return
 
     # --- Load and Splitting document ---
-    doc_splits = load_and_chunk_content() # Load and split PDF into chunks
+    doc_splits = load_and_split_content() # Load and split PDF into chunks
     doc_splits_with_metadata = add_section_metadata(doc_splits) # Add section metadata
 
     # --- Vector Store Creation
@@ -79,13 +79,7 @@ def run_rag_pipeline(question: str):
     
     #print results
     print("\n---RAG Pipeline Result ---")
-    print(f"\nOriginal Question: {question}\n")
-    print(f"Structured Query: {structured_query_obj}") 
-
-    if retrieved_documents:
-        print(f"Retrieved {len(retrieved_documents)} documents.")
-    else:
-        print("No documents retrieved.")
+    print(f"Question: {question}")
     print(f"\nGenerated Answer: {final_answer}")
 
 

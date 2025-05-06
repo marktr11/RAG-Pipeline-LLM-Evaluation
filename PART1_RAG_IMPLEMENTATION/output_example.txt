@@ -1,0 +1,35 @@
+Question:
+What are the two main challenges that hinder the widespread application of the 'LLM-as-a-Judge' approach?
+
+Context:
+ work should focus on broadening the application domains and strategies for implementing LLM-
+as-a-Judge, especially in complex, multi-modal scenarios. Furthermore, a systematic assessment
+, Vol. 1, No. 1, Article . Publication date: March 2025.
+
+A Survey on LLM-as-a-Judge
+2 BACKGROUND AND METHOD
+The capacity of LLMs to emulate human reasoning and evaluate specific inputs against a set of
+predefined rules has paved the way for "LLM-as-a-Judge. " Existing studies indicate that LLM’s
+scalability, adaptability, and cost-effectiveness make them well-suited for managing a growing
+number of evaluative tasks that were traditionally done by humans. These abilities are key in
+utilizing LLMs flexibly across various evaluation scenarios and objectives. As a result, adoption
+of LLM in evaluation has progressed rapidly in practice. Initially, the primary focus of LLMs
+was on language generation and comprehension. With advancements in training paradigms like
+Reinforcement Learning from Human Feedback (RLHF) [108], LLMs became increasingly aligned
+with human values and reasoning processes. This alignment has allowed LLMs to transition from
+generative tasks to evaluative roles. At its core, LLM-as-a-Judge denotes the use of LLMs to evaluate
+objects, actions, or decisions based on predefined rules, criteria, or preferences. It encompasses a
+broad spectrum of roles, including:Graders [31, 154], Evaluators/Assessors [82, 196], Critics [63,
+112, 175], Verifiers [90, 131, 166], Examiners [9], Reward/Ranking Models [100, 139, 180, 193],
+etc.
+Currently, the definition of how to effectively use LLM-as-a-Judge for evaluation tasks is largely
+informal or vague, lacking clear and formal expression. Therefore, we will start with a formal
+
+A Survey on LLM-as-a-Judge
+Real Environment
+Quantitative Evaluation{ic_score: 0.08, turnover: 0.24, Sharpe: 1.21, vol: 0.24, max_drawdown: 0.24}
+LLM-as-a-JudgeBased on the eval result, I suggest several further improvements: 1. incorporate ema smoothing …
+Subm
+
+Generated Answer:
+The two main challenges hindering the widespread application of the 'LLM-as-a-Judge' approach are reliability and robustness. There are concerns about potential biases and factual inaccuracies within LLMs, particularly in sensitive fields like law and finance. Additionally, the lack of clear and formal definitions for effectively using LLMs in evaluative roles complicates their implementation.

@@ -5,8 +5,8 @@ from typing import List
 from config import PDF_FILE_PATH, CHUNK_SIZE, CHUNK_OVERLAP
 import logging
 
-
-def load_and_chunk_content() -> List[Document]: 
+logger = logging.getLogger(__name__)
+def load_and_split_content() -> List[Document]: 
     """
     Loads content from the specified pdf file, extracts relevant sections,
     and splits it into smaller document chunks.
@@ -17,9 +17,6 @@ def load_and_chunk_content() -> List[Document]:
     Returns:
         List[Document]: A list of document chunks.
     """
-    logger = logging.getLogger(__name__)
-    logger.info(f"Loading content from: {PDF_FILE_PATH}")
-
     # Initialize a PDF loader with the specified file path
     loader = PyPDFLoader(file_path=PDF_FILE_PATH)
     # Load all pages from the PDF into a list of Document objects
