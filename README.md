@@ -6,11 +6,16 @@ This repository implements a simple RAG pipeline that reads from PDF files and a
 
 -   `PART1_RAG_IMPLEMENTATION/`: Contains the Python code for the RAG pipeline.
     -   `pipeline.py`: The main script implementing the RAG pipeline.
-    -   `publication.pdf`: The source document used for the RAG system.
-    -   `requirements.txt`: Python dependencies.
     -   `.env.example`: Example environment file for API keys.
+    -   `output_example.txt` : Expected output
+    -   `config.py` : Stores configuration variables such as API keys, chunk size, and model settings.
 -   `PART2_EVALUATION_METHODOLOGY/`: A document outlining the proposed system for evaluating RAG response quality.
+-   `data` : contain the data.
+    -   `publication.pdf`: The source document used for the RAG system.
+-   `exploration` : contain the jupyter notebook file.
+    - `rag_explore.ipynb` : learn and explore how to build RAG.
 -   `README.md`: This file.
+-   `requirements.txt`: Python dependencies.
 
 ## Prerequisites
 
