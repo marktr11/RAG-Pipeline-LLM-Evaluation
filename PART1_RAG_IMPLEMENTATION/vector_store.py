@@ -2,8 +2,7 @@ from langchain_core.documents import Document
 from langchain_core.vectorstores import InMemoryVectorStore 
 from langchain_core.embeddings import Embeddings 
 from typing import List
-
-#This file contains the functions to create and populate the vector store
+import logging
 
 def create_and_populate_vector_store(
     documents: List[Document], embeddings: Embeddings
@@ -18,8 +17,15 @@ def create_and_populate_vector_store(
     Returns:
         InMemoryVectorStore: The populated vector store.
     """
-    print(f"Creating vector store with {len(documents)} documents.")
+    logger = logging.getLogger(__name__)
+    #number of documents to be added to the vector store
+    logger.info(f"Creating vector store with {len(documents)} chunks.")
+
+    # Create a new in-memory vector store using the provided embedding model
     vector_store = InMemoryVectorStore(embeddings) 
+    # Add the documents to the vector store (embedding happens internally)
     vector_store.add_documents(documents)
-    print("Vector store created and populated.")
+
+    logger.info("Vector store created and populated.")
+
     return vector_store
