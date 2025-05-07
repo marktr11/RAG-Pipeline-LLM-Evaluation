@@ -18,7 +18,7 @@ This repository implements a simple RAG pipeline that reads from PDF files and a
 -   `pip` for package installation
 -   An OpenAI API Key (for embeddings and LLM generation)
 
-## Running Part 1: RAG Pipeline
+## Part 1: RAG Pipeline
 
 Consult : [PART1.md](https://github.com/marktr11/RAG-Pipeline-LLM-Evaluation/blob/master/PART1_RAG_IMPLEMENTATION/PART1.md)
 
