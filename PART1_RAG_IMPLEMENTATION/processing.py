@@ -49,7 +49,7 @@ def load_and_split_content() -> List[Document]:
 
 def add_section_metadata(documents: List[Document]) -> List[Document]:
     """
-    Adds a 'section' metadata field ('beginning', 'middle', 'end') to each document
+    Adds a 'section' metadata field ('beginning', 'middle-1', 'middle-2', 'end') to each document
     based on its position in the list.
 
     Args:
@@ -61,15 +61,20 @@ def add_section_metadata(documents: List[Document]) -> List[Document]:
     total_documents = len(documents)
     if total_documents == 0:
         return documents
-        
-    third = total_documents // 3
+
+    # Divide the documents into 4 parts
+    # I divided the document into 4 parts instead of 3 for easier navigation and better relevance. 
+    # This is an experimental approach that might yield more useful results for retrieving contexts.
+    fourth = total_documents // 4
 
     for i, document in enumerate(documents):
-        if i < third:
-            document.metadata["section"] = "beginning"
-        elif i < 2 * third:
-            document.metadata["section"] = "middle"
+        if i < fourth:
+            document.metadata["section"] = "beginning" # First 1/4th of documents
+        elif i < 2 * fourth:
+            document.metadata["section"] = "middle-1" # Second 1/4th of documents
+        elif i < 3 * fourth:
+            document.metadata["section"] = "middle-2" # Third 1/4th of documents
         else:
-            document.metadata["section"] = "end"
-    print("Added 'section' metadata to document chunks.")
+            document.metadata["section"] = "end"     # Last 1/4th of documents
+    print("Added 'section' metadata to document chunks.") 
     return documents
