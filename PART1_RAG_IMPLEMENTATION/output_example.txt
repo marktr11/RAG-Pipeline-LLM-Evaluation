@@ -1,35 +1,80 @@
 Question:
 What are the two main challenges that hinder the widespread application of the 'LLM-as-a-Judge' approach?
 
-Context:
- work should focus on broadening the application domains and strategies for implementing LLM-
+
+--- Retrieved Context Chunks ---
+Chunk 1:
+work should focus on broadening the application domains and strategies for implementing LLM-
 as-a-Judge, especially in complex, multi-modal scenarios. Furthermore, a systematic assessment
 , Vol. 1, No. 1, Article . Publication date: March 2025.
-
-A Survey on LLM-as-a-Judge
-2 BACKGROUND AND METHOD
-The capacity of LLMs to emulate human reasoning and evaluate specific inputs against a set of
-predefined rules has paved the way for "LLM-as-a-Judge. " Existing studies indicate that LLM’s
-scalability, adaptability, and cost-effectiveness make them well-suited for managing a growing
-number of evaluative tasks that were traditionally done by humans. These abilities are key in
-utilizing LLMs flexibly across various evaluation scenarios and objectives. As a result, adoption
-of LLM in evaluation has progressed rapidly in practice. Initially, the primary focus of LLMs
-was on language generation and comprehension. With advancements in training paradigms like
-Reinforcement Learning from Human Feedback (RLHF) [108], LLMs became increasingly aligned
-with human values and reasoning processes. This alignment has allowed LLMs to transition from
-generative tasks to evaluative roles. At its core, LLM-as-a-Judge denotes the use of LLMs to evaluate
-objects, actions, or decisions based on predefined rules, criteria, or preferences. It encompasses a
-broad spectrum of roles, including:Graders [31, 154], Evaluators/Assessors [82, 196], Critics [63,
-112, 175], Verifiers [90, 131, 166], Examiners [9], Reward/Ranking Models [100, 139, 180, 193],
-etc.
-Currently, the definition of how to effectively use LLM-as-a-Judge for evaluation tasks is largely
-informal or vague, lacking clear and formal expression. Therefore, we will start with a formal
-
+---
+Chunk 2:
+ensuring robustness is another critical concern. LLM-as-a-Judge can be susceptible to adversarial
+prompt manipulation and contextual framing biases, potentially causing unintended or unreliable
+evaluations. Finally, generalization across domains and modalities remains a significant hurdle, as
+current models struggle with evaluating multi-modal inputs, reasoning over structured data, and
+adapting to domain-specific evaluation standards.
+To address these challenges, future research should focus on three key areas. First, improving
+reliability requires advancements in self-consistency mechanisms, uncertainty calibration, and bias
+mitigation techniques, ensuring that models provide stable and well-calibrated judgments. Second,
+enhancing robustness involves developing adversarial-resistant evaluation frameworks and refining
+prompt engineering methodologies, reducing sensitivity to context variations. Third, expanding
+generalization capabilities calls for advancing multi-modal reasoning, integrating structured knowl-
+edge representations, and refining domain-adaptive learning strategies, allowing models to handle
+diverse evaluation scenarios more effectively.
+Ultimately, LLM-as-a-Judge is poised to become an integral component of next-generation evalu-
+ation systems, augmenting human expertise rather than replacing it. By addressing the challenges
+of reliability, robustness, and generalization, we can create more trustworthy, adaptive, and compre-
+---
+Chunk 3:
 A Survey on LLM-as-a-Judge
 Real Environment
 Quantitative Evaluation{ic_score: 0.08, turnover: 0.24, Sharpe: 1.21, vol: 0.24, max_drawdown: 0.24}
 LLM-as-a-JudgeBased on the eval result, I suggest several further improvements: 1. incorporate ema smoothing …
-Subm
-
+Submit
+Update
+Writer
+LLM-as-a-Judge
+……
+Shared Context
+KB
+ts_zscore((ts_av_diff(cashflow, 66)) /ts_sum(ts_av_diff(cashflow, 66), 252), 252)
+Review: May also incorporate fundamental data as confirmationPassed: FALSE
+Trading Idea: Cashflow alpha
+𝒕𝟎 𝒕𝟏 𝒕𝟐 𝒕𝑻
+Final Answer
+Knowledge retrieval
+In-context inference
+Inner loop iterationts_zscore(covariance(fundamental_alpha_0，alpha_1, 252), 252)
+Review: May combine with sentiment to make it more accuratePassed: FALSE
+if_else(cond=rank(ts_sum(vec_avg(news_senti))), alpha_1, -1)
+Review: Looks good to me!Passed:TRUE
+Fig. 17. Illustration of using dual-LLM iterative feedback loop for alpha generation in finance. Figure adapted
+from Wang et al. [159].
+stages, necessitating further exploration to refine evaluation methods and expand applications in
+the finance domain.
+7.2.2 Law. LLMs have shown growing capabilities in providing professional advice in specialized
+fields such as legal consultation, particularly excelling in tasks like text summarization and legal
+reasoning. However, compared to other fields, the legal sector is more concerned about potential
+biases and factual inaccuracies within LLMs. Similar to the finance domain, existing research in
+---
+Chunk 4:
+evaluation methods. Recent studies have shown that this idea can merges the scalability of automatic
+methods with the detailed, context-sensitive reasoning found in expert judgments [19, 81, 163, 210,
+220]. Moreover, LLMs may become sufficiently flexible to handle multimodal inputs [ 18] under
+appropriate prompt learning or fine-tuning [64]. These advantages suggest that the LLM-as-a-Judge
+approach could serve as a novel and broadly applicable paradigm for addressing complex and
+open-ended evaluation problems.
+LLM-as-a-Judge holds significant potential as a scalable and adaptable evaluation framework
+compared to aforementioned two traditional methods [160]. However, the widespread application
+of this idea is hindered by two key challenges. The first challenge lies in the absence of a systematic
+review, which highlights the lack of formal definitions, fragmented understanding, and inconsistent
+usage practices in the relevant studies. As a result, researchers and practitioners struggle to
+fully understand and apply effectively. The second challenge involves addressing concerns about
+reliability [189], as merely employing LLM-as-a-Judge does not ensure accurate evaluations aligned
+with established standards. These challenges emphasize the need for a deeper assessment of the
+outputs generated by LLM-as-a-Judge, as well as a crucial investigation into the question: How to
+build reliable LLM-as-a-Judge systems?
+---
 Generated Answer:
-The two main challenges hindering the widespread application of the 'LLM-as-a-Judge' approach are reliability and robustness. There are concerns about potential biases and factual inaccuracies within LLMs, particularly in sensitive fields like law and finance. Additionally, the lack of clear and formal definitions for effectively using LLMs in evaluative roles complicates their implementation.
+The two main challenges hindering the widespread application of the 'LLM-as-a-Judge' approach are the lack of a systematic review, leading to fragmented understanding and inconsistent practices, and concerns about reliability, as using LLMs does not guarantee accurate evaluations. These issues create difficulties for researchers and practitioners in effectively applying the approach. Addressing these challenges is essential for developing reliable LLM-as-a-Judge systems.

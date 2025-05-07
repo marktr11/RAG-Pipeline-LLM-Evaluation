@@ -83,6 +83,7 @@ def run_rag_pipeline(question: str):
     print(f"\nGenerated Answer: {final_answer}")
 
 
+
 # Entry point when this script is executed directly
 if __name__ == "__main__":
     user_question = "What are the two main challenges that hinder the widespread application of the 'LLM-as-a-Judge' approach?" 

@@ -98,16 +98,14 @@ def generate_step(
     print(f"\nGenerated answer: {generated_answer}")
     
 
-    # Limit the total context length to avoid exceeding model's token limit or causing unnecessary verbosity.
-    # This helps maintain LLM performance and prevents errors from overly long input sequences.
-    MAX_CONTEXT_LENGTH = 2000  # chars
-    docs_content = docs_content[:MAX_CONTEXT_LENGTH]
-
     # Save result to file
     output_path = "PART1_RAG_IMPLEMENTATION\output_example.txt"
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(f"Question:\n{question}\n\n")
-        f.write(f"Context:\n {docs_content}\n\n")
+        f.write("\n--- Retrieved Context Documents ---\n")
+        for i, doc in enumerate(context_docs):
+            chunk_text = f"Document {i+1}:\n{doc.page_content}\n---\n"
+            f.write(chunk_text)
         f.write("Generated Answer:\n")
         f.write(generated_answer)
     logger.info(f"\nOutput saved to {output_path}")
