@@ -110,7 +110,8 @@ def generate_step(
         f.write(f"Question:\n{question}\n\n")
         f.write("\n--- Retrieved Context Documents ---\n")
         for i, doc in enumerate(context_docs):
-            chunk_text = f"Document {i+1}:\n{doc.page_content}\n---\n"
+            # Format the output to include the document number and its associated section
+            chunk_text = f"Document {i+1} - Section: {doc.metadata.get('section', 'N/A')}:\n{doc.page_content}\n---\n"
             f.write(chunk_text)
         f.write("Generated Answer:\n")
         f.write(generated_answer)

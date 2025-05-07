@@ -3,7 +3,7 @@ What are the two main challenges that hinder the widespread application of the '
 
 
 --- Retrieved Context Documents ---
-Document 1:
+Document 1 - Section: beginning:
 compared to aforementioned two traditional methods [160]. However, the widespread application
 of this idea is hindered by two key challenges. The first challenge lies in the absence of a systematic
 review, which highlights the lack of formal definitions, fragmented understanding, and inconsistent
@@ -17,7 +17,7 @@ To address these challenges, this paper provides a systematic review of research
 Judge. It offers a comprehensive overview of the field and explores strategies for building reliable
 LLM-as-a-Judge systems. We begin by defining LLM-as-a-Judge through both formal and informal
 ---
-Document 2:
+Document 2 - Section: beginning:
 A Survey on LLM-as-a-Judge
 Practice (2.5). Strategies for enhancing and evaluating the reliability of LLM-as-a-Judge systems
 are discussed in Sections 3, 4, and 5, respectively. Notably, in Section 6, we discuss the synergy
@@ -59,7 +59,7 @@ Challenges
 Reliability
 Robustness
 ---
-Document 3:
+Document 3 - Section: middle-1:
 A Survey on LLM-as-a-Judge
 The negative effects of concreteness bias arises from the neglect of the factual correctness of
 these details, thereby encouraging hallucination [1].
@@ -74,7 +74,7 @@ types of biases. (ii) Challenges of Controlled Study. When conducting an investi
 type of bias, it is challenging to isolate the specific direction of interest from other biases and
 quality-related characteristics. For instance, in the case of position bias, lengthening the response
 ---
-Document 4:
+Document 4 - Section: middle-2:
 Despite these strengths, several challenges must be addressed to fully realize its potential.
 Ensuring reliability remains a key issue, because probabilistic outputs can introduce inconsistencies,
 overconfidence, and biases inherited from training data. Although techniques RLHF have improved
@@ -88,7 +88,7 @@ To address these challenges, future research should focus on three key areas. Fi
 reliability requires advancements in self-consistency mechanisms, uncertainty calibration, and bias
 mitigation techniques, ensuring that models provide stable and well-calibrated judgments. Second,
 ---
-Document 5:
+Document 5 - Section: beginning:
 To address these challenges, this paper provides a systematic review of research on LLM-as-a-
 Judge. It offers a comprehensive overview of the field and explores strategies for building reliable
 LLM-as-a-Judge systems. We begin by defining LLM-as-a-Judge through both formal and informal
@@ -102,7 +102,7 @@ datasets, and methodologies used to evaluate LLM-as-a-Judge systems, highlightin
 sources of bias and methods for their mitigation. Building on this, we introduce a novel benchmark
 specifically designed for evaluating LLM-as-a-Judge systems. Additionally, we explore practical
 ---
-Document 6:
+Document 6 - Section: beginning:
 A Survey on LLM-as-a-Judge
 2 BACKGROUND AND METHOD
 The capacity of LLMs to emulate human reasoning and evaluate specific inputs against a set of
@@ -118,7 +118,7 @@ generative tasks to evaluative roles. At its core, LLM-as-a-Judge denotes the us
 objects, actions, or decisions based on predefined rules, criteria, or preferences. It encompasses a
 broad spectrum of roles, including:Graders [31, 154], Evaluators/Assessors [82, 196], Critics [63,
 ---
-Document 7:
+Document 7 - Section: middle-2:
 that are difficult to quantify, such as evaluating service quality, analyzing user experience feedback,
 and assessing creative content like art or literature reviews. LLMs’ capability to understand and
 generate nuanced language makes them well-suited for subjective evaluation tasks traditionally
@@ -135,7 +135,7 @@ the need for more powerful backbone models.
 8.1 Reliability
 Evaluating the reliability of LLMs when used as judges reveals several pressing challenges. Both
 ---
-Document 8:
+Document 8 - Section: beginning:
 surface-level lexical overlaps, often fail to capture deeper nuances, resulting in poor performance
 in tasks like story generation or instructional texts [124]. As a solution to this persistent dilemma,
 “LLM-as-a-Judge” has emerged as a promising idea to combine the strengths of the above two
