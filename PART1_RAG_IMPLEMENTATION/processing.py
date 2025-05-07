@@ -25,6 +25,12 @@ def load_and_split_content() -> List[Document]:
     logger.info(f"Loaded {len(docs)} document(s) / page(s).")
     
     # Initialize a text splitter to break large documents into smaller chunks
+    #
+    # RecursiveCharacterTextSplitter splits text by recursively trying to break it at certain delimiters 
+    # (e.g., paragraphs, sentences) to maintain meaningful segments. 
+    # This approach results in chunks that are more contextually coherent compared to simple fixed-length splitting.
+    # In contrast, other methods like FixedLengthSplitter break text purely based on character count, 
+    # which can disrupt sentence flow and semantic coherence.
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=CHUNK_SIZE,  # Max characters in one chunk
         chunk_overlap=CHUNK_OVERLAP # Overlap between chunks to preserve context

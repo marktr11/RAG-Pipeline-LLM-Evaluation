@@ -50,6 +50,8 @@ def retrieve_step(structured_query: Search, vector_store: VectorStore) -> List[D
     logger.info(f"Step: retrieve for structured query: {structured_query}")
     
     # Perform a similarity search in the vector store using the 'query' field from the structured Search object
+    # Note: The similarity search does not guarantee that the retrieved chunks will have the same length.
+    # The returned documents (chunks) may vary in length because the vector store may split the text differently.
     retrieved_docs = vector_store.similarity_search(
         structured_query["query"],
     )
