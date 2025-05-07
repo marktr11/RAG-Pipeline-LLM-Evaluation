@@ -74,7 +74,7 @@ PART1_RAG_IMPLEMENTATION/       # Main directory for the RAG pipeline implementa
     ```
 
 2.  **Set up Environment Variables:**
-    *   Create a `.env` file in the `PART1_RAG_IMPLEMENTATION` directory by copying `.env_example`
+    *   Create a `.env` file in the `PART1_RAG_IMPLEMENTATION` directory by copying `.env.example`
     *   Add your OpenAI API key to the `.env` file:
         ```env
         LLM_API_KEY_ENV="your_openai_api_key_here"
