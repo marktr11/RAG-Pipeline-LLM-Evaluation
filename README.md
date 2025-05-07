@@ -5,7 +5,7 @@ This repository implements a simple RAG pipeline that reads from PDF files and a
 ## Project Structure
 
 -   `PART1_RAG_IMPLEMENTATION/`: Contains the Python code for the RAG pipeline.
-    -   `PART1.md`: Part 1 documentation and redirection
+    -   `PART1.md`: Documentation for Part 1, providing an overview of the RAG pipeline, its components, and how to run it.
 -   `PART2_EVALUATION_METHODOLOGY/`: contain a document outlining the proposed system for evaluating RAG response quality.
     -   `Evaluation_methodology.pdf`
 -   `exploration/` : contain the jupyter notebook file.
