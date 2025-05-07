@@ -34,7 +34,7 @@ graph TD
 ## Workflow
 
 ```txt
-part1_rag_pipeline/       # Main directory for the RAG pipeline implementation
+PART1_RAG_IMPLEMENTATION/       # Main directory for the RAG pipeline implementation
 ├── .env.example          # Example environment file template
 ├── PART1.md              # Part1 documentation file
 ├── config.py             # Configuration management (API keys, paths, model names)
