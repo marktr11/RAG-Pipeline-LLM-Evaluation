@@ -30,8 +30,20 @@ graph TD
     H -- Final Answer --> B;
     B --> I[Output: Console & output_example.txt];
 ```
+### How to Read the Diagram:
 
-## Workflow
+1. **Left to Right Flow**: The diagram reads from left to right, where each node represents a step in the pipeline, and arrows indicate the flow of data.
+
+2. **Nodes Represent Steps**: Each node in the diagram represents a step. For example, node **A** is the user’s question (`User Question`), and node **B** is `pipeline.py`, the main orchestrator.
+
+3. **Arrows Indicate Data Flow**: Arrows (`-->`) show the data passing from one step to the next. For example, `A[User Question] --> B(pipeline.py)` means the user’s question flows to the **pipeline.py** step.
+
+4. **Decision Points**: Some steps may have decision points, shown with curly braces `{}`, like `C{config.py: Load Configs}`, indicating that data must pass through configurations before proceeding.
+
+5. **Final Output**: The final answer is generated at the last step, typically shown as the output of `step.py: generate_step`, which is saved to a file like `output_example.txt`.
+
+
+## Part 1 project structure
 
 ```txt
 PART1_RAG_IMPLEMENTATION/       # Main directory for the RAG pipeline implementation
