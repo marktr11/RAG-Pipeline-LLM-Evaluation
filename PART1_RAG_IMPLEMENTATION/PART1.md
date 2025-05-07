@@ -67,20 +67,14 @@ PART1_RAG_IMPLEMENTATION/       # Main directory for the RAG pipeline implementa
 
 ## Setup and Installation
 
-1.  **Clone the repository:**
-    ```bash
-    git clone <your-repository-url>
-    cd <your-repository-name>/part1_rag_pipeline
-    ```
 
-
-2.  **Install dependencies:**
+1.  **Install dependencies:**
     ```bash
     pip install -r requirements.txt 
     ```
 
-3.  **Set up Environment Variables:**
-    *   Create a `.env` file in the `part1_rag_pipeline` directory by copying `.env_example` (you should create this example file).
+2.  **Set up Environment Variables:**
+    *   Create a `.env` file in the `part1_rag_pipeline` directory by copying `.env_example`
     *   Add your OpenAI API key to the `.env` file:
         ```env
         LLM_API_KEY_ENV="your_openai_api_key_here"
