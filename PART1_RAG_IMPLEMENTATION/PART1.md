@@ -33,19 +33,21 @@ graph TD
 
 ## Workflow
 
+```txt
 part1_rag_pipeline/       # Main directory for the RAG pipeline implementation
-├── pipeline.py           # Main script to run the RAG pipeline
-├── step.py               # Core RAG steps: query analysis, retrieval, generation
-├── processing.py         # PDF loading, splitting, and metadata addition
-├── vector_store.py       # Vector store creation and population
-├── state_search.py       # TypedDict definitions for structured search
+├── .env.example          # Example environment file template
+├── PART1.md              # Part1 documentation file
 ├── config.py             # Configuration management (API keys, paths, model names)
 ├── data/                 # Directory for input data files
-│   └── publication.pdf   # Input PDF document (ensure this exists or adjust path)
-├── .env.example          # Example environment file template
-├── requirements.txt      # Python dependencies (you need to create this)
-└── output_example.txt    # Example output file from a pipeline run
-└── PART1.md             # Part1 documentation file
+│   └── publication.pdf   # Input PDF document
+├── output_example.txt    # Example output file from a pipeline run
+├── pipeline.py           # Main script to run the RAG pipeline
+├── processing.py         # PDF loading, splitting, and metadata addition
+├── requirements.txt      # Python dependencies
+├── search.py             # TypedDict definitions for structured search
+├── step.py               # Core RAG steps: query analysis, retrieval, generation
+└── vector_store.py       # Vector store creation and population 
+```
 
 ## Setup and Installation
 
@@ -60,7 +62,6 @@ part1_rag_pipeline/       # Main directory for the RAG pipeline implementation
     ```bash
     pip install -r requirements.txt 
     ```
-    *(You will need to create a `requirements.txt` file. Based on your code, it would likely include `langchain`, `langchain-openai`, `pypdf`, `python-dotenv`)*
 
 3.  **Set up Environment Variables:**
     *   Create a `.env` file in the `part1_rag_pipeline` directory by copying `.env_example` (you should create this example file).
