@@ -29,6 +29,7 @@ graph TD
     B -- Question, Retrieved Docs, LLM, Prompt --> H[step.py: generate_step];
     H -- Final Answer --> B;
     B --> I[Output: Console & output_example.txt];
+```
 
 ## Workflow
 
