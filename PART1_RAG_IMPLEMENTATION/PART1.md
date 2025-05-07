@@ -16,7 +16,7 @@ This part contains a Python implementation of a minimal Retrieval-Augmented Gene
 
 ```mermaid
 graph TD
-    A[User Question] --> B(main_pipeline.py);
+    A[User Question] --> B(pipeline.py);
     B --> C{config.py: Load Configs};
     B -- PDF Path, Chunk Settings --> D[processing.py: Load & Split PDF];
     D -- Doc Splits w/ Metadata --> B;
