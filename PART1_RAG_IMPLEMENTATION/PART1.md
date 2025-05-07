@@ -32,15 +32,19 @@ graph TD
 ```
 ### How to Read the Diagram:
 
-1. **Left to Right Flow**: The diagram reads from left to right, where each node represents a step in the pipeline, and arrows indicate the flow of data.
+1. **Flow Direction**: The diagram flows **left to right**, with each node representing a step in the pipeline. The arrows indicate the flow of data between these steps.
 
-2. **Nodes Represent Steps**: Each node in the diagram represents a step. For example, node **A** is the user’s question (`User Question`), and node **B** is `pipeline.py`, the main orchestrator.
+2. **Nodes Representing Steps**:
+   - Each box (node) represents a single operation or action. For instance, `A[User Question]` represents receiving the user's question, and `B(pipeline.py)` represents the script `pipeline.py` where the processing begins.
 
-3. **Arrows Indicate Data Flow**: Arrows (`-->`) show the data passing from one step to the next. For example, `A[User Question] --> B(pipeline.py)` means the user’s question flows to the **pipeline.py** step.
+3. **Arrows Represent Data Flow**:
+   - Arrows (`-->`) show the direction of data flow. For example, `A[User Question] --> B(pipeline.py)` indicates that the **User Question** flows into **pipeline.py** for processing.
 
-4. **Decision Points**: Some steps may have decision points, shown with curly braces `{}`, like `C{config.py: Load Configs}`, indicating that data must pass through configurations before proceeding.
+4. **Decision Points**:
+   - **Decision points** or branching in the pipeline are shown as **diamond-shaped nodes**. For instance, in the diagram, the node `C{config.py: Load Configs}` represents a decision point where the pipeline determines whether to load configuration settings. When rendered, these decision points will appear as diamond shapes, and the associated label (`config.py: Load Configs`) won’t be visible, only the shape itself.
 
-5. **Final Output**: The final answer is generated at the last step, typically shown as the output of `step.py: generate_step`, which is saved to a file like `output_example.txt`.
+5. **Final Output**:
+   - The final node shows where the output is produced or stored. In this case, `I[Output: Console & output_example.txt]` indicates that the results of the pipeline are saved to an output file or printed to the console.
 
 
 ## Part 1 project structure
