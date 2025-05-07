@@ -5,7 +5,7 @@ from langchain_core.prompts import BasePromptTemplate
 from langchain_core.documents import Document 
 from typing import List
 import logging
-from PART1_RAG_IMPLEMENTATION.search import Search 
+from search import Search 
 
 logger = logging.getLogger(__name__)
 
