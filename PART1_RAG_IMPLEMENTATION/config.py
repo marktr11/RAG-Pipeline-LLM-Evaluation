@@ -78,8 +78,12 @@ else:
 
 
 # Text splitting parameters
-CHUNK_SIZE = 1500
-CHUNK_OVERLAP = 250
+# For documents >3500 characters, initially I set CHUNK_SIZE to 1000 and CHUNK_OVERLAP to 200 by default. 
+# However, I found that the retrieved context seemed less reliable, as the chunks appeared to be either too short or lacked sufficient relevant content.
+# Based on this, I increased the CHUNK_SIZE to 1200 and set the CHUNK_OVERLAP to 300 for better context retrieval.
+CHUNK_SIZE = 1200
+CHUNK_OVERLAP = 300
+
 
 # Model names
 EMBEDDING_MODEL_NAME = "text-embedding-3-large"

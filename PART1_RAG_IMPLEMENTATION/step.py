@@ -50,11 +50,15 @@ def retrieve_step(structured_query: Search, vector_store: VectorStore) -> List[D
     logger.info(f"Step: retrieve for structured query: {structured_query}")
     
     # Perform a similarity search in the vector store using the 'query' field from the structured Search object
-    # Note: The similarity search does not guarantee that the retrieved chunks will have the same length.
-    # The returned documents (chunks) may vary in length because the vector store may split the text differently.
+    # Note: The similarity search does not guarantee that the retrieved chunks will have the same length as the original split chunks.
+    # The retrieved chunk length may vary because it only extracts the most relevant parts.
+    # The search results are independent of the added section metadata.
     retrieved_docs = vector_store.similarity_search(
-        structured_query["query"],
+    structured_query["query"],
+        k=8  # With a document length >3500 characters, max_chunk = 1200, and overlap = 300, k should not be too small. 
+        # After testing with k = 5 - 9, I decided to fix k = 8 for optimal results.
     )
+
     # Log the number of documents retrieved and the section associated with the query
     logger.info(f"Retrieved {len(retrieved_docs)} documents for section '{structured_query['section']}'.")
 

@@ -21,7 +21,7 @@ def load_and_split_content() -> List[Document]:
     loader = PyPDFLoader(file_path=PDF_FILE_PATH)
     # Load all pages from the PDF into a list of Document objects
     docs = loader.load()
-
+    logger.info(f"Total characters extracted from relevant sections: {len(docs[0].page_content)}")
     logger.info(f"Loaded {len(docs)} document(s) / page(s).")
     
     # Initialize a text splitter to break large documents into smaller chunks
