@@ -1,6 +1,6 @@
 # Part 1: Basic RAG Pipeline Implementation
 
-This part contains a Python implementation of a minimal Retrieval-Augmented Generation (RAG) pipeline. The pipeline processes a PDF document, allows querying against its content, and generates answers based on retrieved information.
+This part contains a Python implementation of a minimal Retrieval-Augmented Generation (RAG) pipeline. The pipeline processes a PDF document, allows querying against its content, and generates answer based on retrieved information.
 
 ## Features and workflow
 
