@@ -118,3 +118,17 @@ def generate_step(
     logger.info(f"\nOutput saved to {output_path}")
 
     return generated_answer 
+
+
+
+# NOTE ON ANSWER QUALITY: The generated answer seems okay, but retrieval could be improved.
+# Question : What are the two main challenges that hinder the widespread application of the 'LLM-as-a-Judge' approach?
+# to answer this, normally the context should be from the section 8.
+# The core "Challenges" (Section 8 of PDF) were not fully retrieved. 
+# Many retrieved chunks came from Abstract/Intro instead of the more specific Section 8.
+# This might be due to:
+#   1. Semantic overlap in introductory sections.
+#   2. Suboptimal chunking (e.g., a relevant chunk from Sec 8, like retrieved Doc 7 in output file, was too fragmented,
+#      and subsequent parts of Sec 8 might have been in chunks with lower overall relevance).
+# EFFECT: Potential lack of specific details in the context provided to the LLM.
+# ACTION: Review chunking parameters (size/overlap) and explore retrieval enhancements
