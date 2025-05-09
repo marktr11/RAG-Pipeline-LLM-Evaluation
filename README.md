@@ -32,6 +32,4 @@ Generated answer: The two main challenges hindering the widespread application o
 
 ## Part 2: Evaluation Methodology
 
-The written component for Part 2, explaining the design and implementation of a RAG response evaluation system, can be found in the file:
-
-[PART2.md](https://github.com/marktr11/RAG-Pipeline-LLM-Evaluation/blob/master/PART2_EVALUATION_METHODOLOGY/PART2.md)
+The written component for Part 2, explaining the design and implementation of a RAG response evaluation system, can be found in the file: [PART2.md](https://github.com/marktr11/RAG-Pipeline-LLM-Evaluation/blob/master/PART2_EVALUATION_METHODOLOGY/PART2.md)

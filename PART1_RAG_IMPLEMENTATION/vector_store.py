@@ -31,3 +31,8 @@ def create_and_populate_vector_store(
     logger.info("Vector store created and populated.")
 
     return vector_store
+
+# For future scalability with a larger number of documents/sources,
+# consider replacing InMemoryVectorStore with a persistent and more efficient
+# vector database (e.g., FAISS, ChromaDB, or a cloud-based solution).
+# InMemoryVectorStore re-processes documents on each run, which is inefficient for larger datasets.
