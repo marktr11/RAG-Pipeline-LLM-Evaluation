@@ -1,5 +1,5 @@
 # RAG Pipeline and Evaluation Methodology 
-This repository implements a simple RAG pipeline that reads from PDF file and answers question. Additionally, it proposes an evaluation architecture for the pipeline.
+This repository implements a simple RAG pipeline that reads from PDF file and answers question. Additionally, it proposes an evaluation pipeline.
 
 
 ## Project Structure
